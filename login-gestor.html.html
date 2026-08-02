@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Monitoramento - Login Gestor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header"><div class="logo-mini">👔</div><h2>TOTAL MONITORAMENTO</h2><p style="opacity: 0.7; font-size: 12px;">Login do Gestor</p></div>
+        <div class="login-body">
+            <form onsubmit="loginGestor(event)">
+                <div class="form-group"><label>Nome</label><input type="text" id="nomeGestor" required></div>
+                <div class="form-group"><label>Senha</label><input type="password" id="senhaGestor" required></div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; background: var(--azul);">🔐 Entrar</button>
+            </form>
+            <div class="link-area"><p>Não cadastrado? <a href="cadastro-gestor.html">Cadastre-se</a></p><p><a href="index.html">← Voltar</a></p></div>
+        </div>
+    </div>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

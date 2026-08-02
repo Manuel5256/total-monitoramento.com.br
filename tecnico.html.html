@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Monitoramento - Área do Técnico</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header-top"><div class="header-content"><div class="logo-area"><div class="logo-icon">📡</div><div class="logo-text"><h1>TOTAL <span>MONITORAMENTO</span></h1><p>Área do Técnico</p></div></div><nav class="nav-menu"><a href="tecnico.html" class="active">👨‍🔧 Técnico</a><a href="#" onclick="logout()">🚪 Sair</a></nav></div></header>
+    <div class="main-container">
+        <div style="background: var(--preto-claro); padding: 20px; border-radius: 12px; margin-bottom: 25px; border: 1px solid var(--laranja); display: flex; justify-content: space-between;"><div><strong style="color: var(--laranja);">👨‍🔧</strong> <span id="nomeTecnicoLogado"></span> | <span id="funcaoTecnicoLogado" style="color: var(--cinza);"></span></div><button class="btn btn-danger btn-sm" onclick="logout()">🚪 Sair</button></div>
+        <div class="stats-grid"><div class="stat-card" style="border-left-color: var(--amarelo);"><div class="stat-numero" id="countAbertasTec">0</div><div class="stat-label">🆕 Abertas</div></div><div class="stat-card" style="border-left-color: var(--laranja);"><div class="stat-numero" id="countAndamentoTec">0</div><div class="stat-label">⏳ Em Andamento</div></div><div class="stat-card" style="border-left-color: var(--verde);"><div class="stat-numero" id="countResolvidasTec">0</div><div class="stat-label">✅ Finalizadas</div></div></div>
+        <div class="card"><div class="card-header"><div class="icon" style="background: var(--amarelo);">🆕</div><h2>OS Abertas</h2></div><div class="table-container"><table><thead><tr><th>Protocolo</th><th>Data</th><th>Cliente</th><th>Serviço</th><th>Prioridade</th><th>Ação</th></tr></thead><tbody id="corpoOSAbertas"></tbody></table></div></div>
+        <div class="card mt-30"><div class="card-header"><div class="icon" style="background: var(--laranja);">⏳</div><h2>Em Andamento</h2></div><div class="table-container"><table><thead><tr><th>Protocolo</th><th>Data</th><th>Cliente</th><th>Serviço</th><th>Início</th><th>Ação</th></tr></thead><tbody id="corpoOSAndamento"></tbody></table></div></div>
+        <div class="card mt-30"><div class="card-header"><div class="icon" style="background: var(--verde);">✅</div><h2>Finalizadas</h2></div><div class="table-container"><table><thead><tr><th>Protocolo</th><th>Data</th><th>Cliente</th><th>Serviço</th><th>Início</th><th>Fim</th></tr></thead><tbody id="corpoOSResolvidas"></tbody></table></div></div>
+    </div>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js"></script>
+    <script src="js/script.js"></script>
+    <script>document.addEventListener('DOMContentLoaded',function(){const t=verificarLogin('tecnicoLogado');if(!t)return;carregarOSTecnico()});</script>
+</body>
+</html>

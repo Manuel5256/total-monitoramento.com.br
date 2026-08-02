@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Monitoramento - Login Cliente</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header"><div class="logo-mini">👤</div><h2>TOTAL MONITORAMENTO</h2><p style="opacity: 0.7; font-size: 12px; letter-spacing: 2px; margin-top: 5px;">Login do Cliente</p></div>
+        <div class="login-body">
+            <form onsubmit="loginCliente(event)">
+                <div class="form-group"><label>Usuário</label><input type="text" id="usuarioCliente" required placeholder="Digite seu usuário"></div>
+                <div class="form-group"><label>Senha</label><input type="password" id="senhaCliente" required placeholder="Digite sua senha"></div>
+                <div style="margin-top: 25px;"><button type="submit" class="btn btn-primary" style="width: 100%;">🔐 Entrar</button></div>
+            </form>
+            <div class="link-area">
+                <p>Não possui cadastro? <a href="cadastro-cliente.html">Cadastre-se aqui</a></p>
+                <p style="margin-top: 10px;"><a href="index.html">← Voltar ao início</a></p>
+            </div>
+        </div>
+    </div>
+    <footer style="text-align: center; padding: 20px; color: var(--cinza); font-size: 11px;"><p>&copy; 2024 TOTAL MONITORAMENTO</p></footer>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

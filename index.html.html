@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Monitoramento - Bem-Vindo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="welcome-container">
+        <div class="welcome-card">
+            <div class="welcome-logo">📡</div>
+            <h1>TOTAL <span>MONITORAMENTO</span></h1>
+            <p class="slogan">Tecnologia em Segurança</p>
+            <h2 style="color: var(--amarelo); margin-bottom: 30px; font-size: 1.3em;">Seja Bem-Vindo!</h2>
+            <p style="color: var(--cinza); margin-bottom: 30px; font-size: 14px;">Selecione o seu perfil para continuar:</p>
+            <div class="welcome-buttons">
+                <a href="cadastro-cliente.html" class="btn-welcome btn-cliente"><span class="btn-icon">👤</span><span>CLIENTE</span></a>
+                <a href="cadastro-operador.html" class="btn-welcome btn-operador"><span class="btn-icon">🖥️</span><span>OPERADOR DE MONITORAMENTO</span></a>
+                <a href="cadastro-tecnico.html" class="btn-welcome btn-tecnico"><span class="btn-icon">🔧</span><span>TÉCNICO</span></a>
+                <a href="cadastro-gestor.html" class="btn-welcome" style="background: var(--preto-medio); color: var(--branco); border-color: rgba(33,150,243,0.5);"><span class="btn-icon">👔</span><span>GESTOR</span></a>
+            </div>
+            <div style="margin-top: 30px; color: var(--cinza); font-size: 11px;">
+                <p>Já possui cadastro?</p>
+                <p style="margin-top: 8px;">
+                    <a href="login-cliente.html" style="color: var(--amarelo); text-decoration: none; margin: 0 8px;">Login Cliente</a> |
+                    <a href="login-operador.html" style="color: var(--amarelo); text-decoration: none; margin: 0 8px;">Login Operador</a> |
+                    <a href="login-tecnico.html" style="color: var(--amarelo); text-decoration: none; margin: 0 8px;">Login Técnico</a> |
+                    <a href="login-gestor.html" style="color: var(--azul); text-decoration: none; margin: 0 8px;">Login Gestor</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer style="text-align: center; padding: 20px; color: var(--cinza); font-size: 11px; position: fixed; bottom: 0; width: 100%;">
+        <p>&copy; 2024 TOTAL MONITORAMENTO - Todos os direitos reservados</p>
+    </footer>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

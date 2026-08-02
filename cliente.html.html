@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Monitoramento - Área do Cliente</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header-top"><div class="header-content"><div class="logo-area"><div class="logo-icon">📡</div><div class="logo-text"><h1>TOTAL <span>MONITORAMENTO</span></h1><p>Área do Cliente</p></div></div><nav class="nav-menu"><a href="cliente.html" class="active">🏠 Abrir O.S.</a><a href="#" onclick="logout()">🚪 Sair</a></nav></div></header>
+    <div class="main-container">
+        <div class="stats-grid">
+            <div class="stat-card" style="border-left-color: var(--amarelo);"><div class="stat-numero" id="countAbertas">0</div><div class="stat-label">🆕 Minhas OS Abertas</div></div>
+            <div class="stat-card" style="border-left-color: var(--laranja);"><div class="stat-numero" id="countAndamento">0</div><div class="stat-label">⏳ Em Andamento</div></div>
+            <div class="stat-card" style="border-left-color: var(--verde);"><div class="stat-numero" id="countResolvidas">0</div><div class="stat-label">✅ Finalizadas</div></div>
+        </div>
+        <div class="card" id="formCard"><div class="card-header"><div class="icon">📋</div><h2>Abrir Ordem de Serviço</h2></div>
+            <form id="formOS" onsubmit="cadastrarOS(event)">
+                <div class="form-group"><label>Tipo de Serviço</label><select id="tipoServico" required><option value="">Selecione</option><option value="Instalação de Câmeras">Instalação de Câmeras</option><option value="Manutenção de CFTV">Manutenção de CFTV</option><option value="Alarme Monitorado">Alarme Monitorado</option><option value="Controle de Acesso">Controle de Acesso</option><option value="Cerca Elétrica">Cerca Elétrica</option><option value="Suporte Técnico">Suporte Técnico</option><option value="Outros">Outros</option></select></div>
+                <div class="form-group"><label>Prioridade</label><select id="prioridade" required><option value="Baixa">Baixa</option><option value="Média" selected>Média</option><option value="Alta">Alta</option><option value="Urgente">Urgente</option></select></div>
+                <div class="form-group"><label>Descrição</label><textarea id="descricaoServico" rows="4" required placeholder="Descreva detalhadamente..."></textarea></div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">📝 Abrir Ordem de Serviço</button>
+            </form>
+        </div>
+        <div class="card" id="protocoloSection" style="display: none;"><div style="text-align: center; padding: 30px;"><div style="font-size: 60px;">✅</div><h3 style="color: var(--amarelo);">Ordem de Serviço Cadastrada!</h3><p style="color: var(--cinza);">Seu número de protocolo:</p><div style="background: var(--preto-piano); padding: 20px; border-radius: 10px; border: 2px dashed var(--amarelo); display: inline-block;"><h2 id="numeroProtocolo" style="font-size: 3em; letter-spacing: 8px; color: var(--amarelo);"></h2></div></div></div>
+        <div class="card mt-30"><div class="card-header"><div class="icon">📋</div><h2>Minhas Ordens de Serviço</h2></div>
+            <h3 style="color: var(--amarelo);">🆕 Abertas</h3><div id="historicoAbertas"></div>
+            <h3 style="color: var(--laranja); margin-top: 25px;">⏳ Em Andamento</h3><div id="historicoAndamento"></div>
+            <h3 style="color: var(--verde); margin-top: 25px;">✅ Finalizadas</h3><div id="historicoResolvidas"></div>
+        </div>
+    </div>
+    <footer style="text-align: center; padding: 20px; color: var(--cinza); font-size: 11px;"><p>&copy; 2024 TOTAL MONITORAMENTO</p></footer>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js"></script>
+    <script src="js/script.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { if (!verificarLogin('clienteLogado')) return; carregarOSCliente(); });</script>
+</body>
+</html>

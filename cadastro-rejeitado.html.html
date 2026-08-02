@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Monitoramento - Rejeitado</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="welcome-container"><div class="welcome-card">
+        <div class="welcome-logo" style="background: var(--vermelho);">❌</div>
+        <h1 style="color: var(--vermelho);">CADASTRO <span style="color: var(--vermelho);">REJEITADO</span></h1>
+        <p style="color: var(--cinza); margin: 20px 0;">Sua solicitação não foi aprovada.</p>
+        <div style="background: rgba(255,23,68,0.1); padding: 20px; border-radius: 10px; margin: 20px 0;"><p style="color: var(--cinza); font-size: 13px;">Motivos: operador não reconheceu, tempo expirou ou dados incorretos.</p></div>
+        <div style="display: flex; gap: 15px; justify-content: center;"><a href="cadastro-tecnico.html" class="btn btn-primary" style="text-decoration: none;">🔄 Tentar Novamente</a><a href="index.html" class="btn btn-danger" style="text-decoration: none; background: transparent; border: 2px solid var(--vermelho); color: var(--vermelho); padding: 14px 30px; border-radius: 10px;">← Início</a></div>
+    </div></div>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js"></script>
+    <script src="js/script.js"></script>
+    <script>localStorage.removeItem('solicitacaoTecnico');localStorage.removeItem('timerSolicitacao');localStorage.removeItem('tecnicoAprovado');localStorage.removeItem('tecnicoRejeitado');</script>
+</body>
+</html>
